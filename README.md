@@ -31,6 +31,7 @@
   - [Evaluation & Testing](#evaluation--testing)
   - [Observability & Monitoring](#observability--monitoring)
   - [Prompt Engineering](#prompt-engineering)
+  - [AI Coding Agents & Workflows](#ai-coding-agents--workflows)
 - [🎓 Courses & Structured Learning](#-courses--structured-learning)
 - [📄 Must-Read Papers](#-must-read-papers)
 - [👥 Communities](#-communities)
@@ -194,6 +195,12 @@
 | [Prompt Engineering Guide](https://github.com/dair-ai/Prompt-Engineering-Guide) | Community-maintained guide covering techniques, papers, and model-specific tips | Use as a reference, not a course — look up techniques (e.g. self-consistency) when a benchmark paper mentions them |
 | [DSPy](https://github.com/stanfordnlp/dspy) | Stanford's framework for *programming* (not hand-writing) prompts — optimizes them automatically | Learn after manual prompting plateaus: define your task as a signature, give it 20 examples, let the optimizer beat your hand-tuned prompt |
 
+### AI Coding Agents & Workflows
+
+| Resource | What it is | How to use it |
+|----------|------------|---------------|
+| [Claude Code Harness](https://github.com/Chachamaru127/claude-code-harness) | A disciplined delivery loop for Claude Code — Spec → Plan → Work → Review → Ship, with evidence gates at every step so agent work doesn't drift (plans lost in chat, skipped tests, late review) | Install it into your Claude Code setup per the README, then run one small feature through the full 5-verb loop. The Spec and Review gates alone will noticeably tighten your agent workflow |
+
 ---
 
 ## 🎓 Courses & Structured Learning
@@ -295,6 +302,6 @@ If this helped you, **star the repo** — it helps others find these free resour
 
 ## 📜 License
 
-[MIT](LICENSE) © [Fahim Arakil](https://github.com/fahimar)
+[MIT](LICENSE) © [Fahim A R Akil](https://github.com/fahimar)
 
 **Maintained by [Fahim Arakil](https://github.com/fahimar)** · Resource descriptions and usage guidance are original work.
