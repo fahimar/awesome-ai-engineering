@@ -304,4 +304,4 @@ If this helped you, **star the repo** — it helps others find these free resour
 
 [MIT](LICENSE) © [Fahim A R Akil](https://github.com/fahimar)
 
-**Maintained by [Fahim Arakil](https://github.com/fahimar)** · Resource descriptions and usage guidance are original work.
+**Maintained by [Fahim A R Akil](https://github.com/fahimar)** · Resource descriptions and usage guidance are original work.

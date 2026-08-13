@@ -4,8 +4,9 @@ on:
   push:
     branches: [main]
     paths: ["README.md"]
+  # Runs on every PR (no path filter) because this check is required for merging —
+  # a path-filtered required check would leave non-README PRs stuck on "Expected"
   pull_request:
-    paths: ["README.md"]
   schedule:
     # Weekly, Monday 06:00 UTC — catches links that die over time
     - cron: "0 6 * * 1"

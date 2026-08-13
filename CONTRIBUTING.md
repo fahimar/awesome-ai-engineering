@@ -4,6 +4,15 @@ Thank you for helping grow this collection! 🎉 This list stays valuable becaus
 
 ---
 
+## 📌 Ground Rules (read first)
+
+1. **Fork this repo and work on a branch** — the `main` branch is protected. Direct pushes and self-merges are blocked; every change lands through a reviewed Pull Request.
+2. **Study the project before contributing** — skim the [README](README.md) structure, the three pillars (Agents / Automation / Engineering), and this guide so your addition fits where it belongs.
+3. **This is a 100% resource-sharing platform — you MUST NOT share any malware or suspicious links.** Every link must point to the official, legitimate source (official repo, docs, or site). PRs containing shortened URLs, redirect chains, cracked/pirated content, or anything that smells off will be closed immediately and the account reported to GitHub.
+4. **Re-verify every link before opening a PR** — click each one right before you submit and confirm it loads and points where the description says. An automated link checker also runs on every PR and must pass before merging. Let's keep this a friendly, safe environment. 🤝
+
+---
+
 ## 🧭 Ways to Contribute
 
 | I want to… | Do this |
