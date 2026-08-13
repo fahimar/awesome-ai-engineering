@@ -1,0 +1,71 @@
+name: 💡 Resource Suggestion
+description: Suggest a free AI agents / automation / engineering resource for the list
+title: "Add: <resource name>"
+labels: ["resource-suggestion"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Resource name
+      placeholder: e.g. promptfoo
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      placeholder: https://github.com/...
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Which section does it belong in?
+      options:
+        - AI Agents – Agent Frameworks
+        - AI Agents – Multi-Agent Systems
+        - AI Agents – Memory & State
+        - AI Agents – Learning Resources
+        - AI Automation – Workflow Platforms
+        - AI Automation – No-Code / Low-Code Builders
+        - AI Automation – MCP
+        - AI Automation – Browser & Computer Use
+        - AI Engineering – RAG & Retrieval
+        - AI Engineering – Vector Databases
+        - AI Engineering – Local Model Serving
+        - AI Engineering – Evaluation & Testing
+        - AI Engineering – Observability
+        - AI Engineering – Prompt Engineering
+        - Courses & Structured Learning
+        - Papers
+        - Communities
+        - New section (explain below)
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What is it? (15–40 words, factual, no hype)
+    validations:
+      required: true
+  - type: textarea
+    id: how-to-use
+    attributes:
+      label: How to use it (required!)
+      description: A concrete first step, command, or strategy — this is what makes this list different.
+      placeholder: "`npx promptfoo init` → write 10 test cases → run on every prompt change"
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: The resource is completely free or has a genuinely useful free tier
+          required: true
+        - label: I have personally used this resource
+          required: true
+        - label: It is not already on the list
+          required: true
+        - label: This is not an affiliate link, and if it's my own project I've disclosed that
+          required: true

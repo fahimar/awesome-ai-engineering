@@ -1,0 +1,26 @@
+name: 🔗 Broken Link Report
+description: Report a dead, moved, or paywalled link
+title: "Broken link: <resource name>"
+labels: ["broken-link"]
+body:
+  - type: input
+    id: resource
+    attributes:
+      label: Which resource / link?
+    validations:
+      required: true
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What's wrong?
+      options:
+        - Link is dead (404 / domain gone)
+        - Content moved to a new URL
+        - Resource is no longer free
+        - Resource is abandoned / outdated
+    validations:
+      required: true
+  - type: input
+    id: replacement
+    attributes:
+      label: Replacement URL (if known)
