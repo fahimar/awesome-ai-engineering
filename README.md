@@ -200,6 +200,7 @@
 | Resource | What it is | How to use it |
 |----------|------------|---------------|
 | [Claude Code Harness](https://github.com/Chachamaru127/claude-code-harness) | A disciplined delivery loop for Claude Code — Spec → Plan → Work → Review → Ship, with evidence gates at every step so agent work doesn't drift (plans lost in chat, skipped tests, late review) | Install it into your Claude Code setup per the README, then run one small feature through the full 5-verb loop. The Spec and Review gates alone will noticeably tighten your agent workflow |
+| [OmniRoute](https://github.com/diegosouzapw/OmniRoute.git) | Workflow rules engine for AI agents — defines intelligent routing, branching, and orchestration logic for autonomous systems | Clone the repo and review the workflow definition format, then integrate it into your agent pipeline to add declarative control flow and conditional routing |
 
 ---
 
