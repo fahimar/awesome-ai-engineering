@@ -16,6 +16,7 @@ jobs:
   linkChecker:
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       issues: write
     steps:
       - uses: actions/checkout@v4
@@ -30,12 +31,44 @@ jobs:
             --max-retries 2
             --timeout 20
             README.md
+          # Never fail here: the steps below decide what a broken link means for each event
           fail: false
 
-      - name: Open issue if links are broken (scheduled runs only)
+      # One tracking issue, reused every week. Only the bot's own issue is matched,
+      # so a "Broken Link" report filed by a person is never overwritten or closed.
+      - name: Find the open link-checker issue, if any
+        id: tracking
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          number=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open \
+            --label broken-link --author "app/github-actions" \
+            --limit 1 --json number --jq '.[0].number // empty')
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+
+      - name: Open or update the link-checker issue (scheduled runs only)
         if: github.event_name == 'schedule' && steps.lychee.outputs.exit_code != '0'
         uses: peter-evans/create-issue-from-file@v5
         with:
           title: "🔗 Link checker found broken links"
           content-filepath: ./lychee/out.md
           labels: broken-link
+          # Empty when no issue is open, which creates a new one
+          issue-number: ${{ steps.tracking.outputs.number }}
+
+      - name: Close the link-checker issue once every link passes
+        if: github.event_name != 'pull_request' && steps.lychee.outputs.exit_code == '0' && steps.tracking.outputs.number != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE: ${{ steps.tracking.outputs.number }}
+        run: |
+          gh issue close "$ISSUE" --repo "$GITHUB_REPOSITORY" \
+            --comment "Every link in README.md passes as of [this run]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID). Closing."
+
+      # This check is required for merging, so a PR that adds a broken link must fail it
+      - name: Fail the PR check when a link is broken
+        if: github.event_name == 'pull_request' && steps.lychee.outputs.exit_code != '0'
+        run: |
+          echo "::error::lychee found broken links in README.md. See the job summary for the list."
+          exit 1

@@ -275,7 +275,7 @@
 Contributions are what make open source amazing! Found a great free resource? Know a better "how to use it" tip?
 
 1. Read the [Contribution Guidelines](CONTRIBUTING.md)
-2. [Open an issue](../../issues/new/choose) to suggest a resource, or
+2. [Open an issue](https://github.com/fahimar/awesome-ai-engineering/issues/new/choose) to suggest a resource, or
 3. Submit a PR directly — every accepted contribution gets you featured below ⬇️
 
 **Rules of thumb:** free (or genuinely useful free tier) · actively maintained · you've personally used it · comes with a real "how to use it" tip.

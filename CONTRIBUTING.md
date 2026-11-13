@@ -17,9 +17,9 @@ Thank you for helping grow this collection! 🎉 This list stays valuable becaus
 
 | I want to… | Do this |
 |------------|---------|
-| Suggest a resource (easiest) | [Open a "Resource Suggestion" issue](../../issues/new/choose) |
+| Suggest a resource (easiest) | [Open a "Resource Suggestion" issue](https://github.com/fahimar/awesome-ai-engineering/issues/new/choose) |
 | Add a resource myself | Submit a Pull Request (guide below) |
-| Report a dead/changed link | [Open a "Broken Link" issue](../../issues/new/choose) |
+| Report a dead/changed link | [Open a "Broken Link" issue](https://github.com/fahimar/awesome-ai-engineering/issues/new/choose) |
 | Improve a description or "how to use" tip | Submit a small PR — these are very welcome |
 | Reorganize / propose a new section | Open an issue first to discuss |
 
